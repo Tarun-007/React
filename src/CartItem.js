@@ -15,11 +15,29 @@ class CartItem extends React.Component {
     }
 
     increaseQuantity = () => {
-        console.log(this);
+        // if previous state not required use this
+        // this.setState({
+        //     quantity: this.state.quantity + 1
+        // })
+
+        // if previous state required use this
+        this.setState((prevState) => {
+            return {
+                quantity: prevState.quantity + 1
+            }
+        })
+
+    
     }
 
     decreaseQuantity = () => {
-        console.log(this)
+        this.setState((prevState) => {
+            if (prevState.quantity > 0) {
+                return {
+                    quantity: prevState.quantity - 1
+                }
+            }
+        })
     }
 
     render() {
@@ -39,7 +57,7 @@ class CartItem extends React.Component {
                         Rs {price}
                     </div>
                     <div style={{ color: 'grey' }}>
-                        Qty :{quantity}
+                        Qty : {quantity}
                     </div>
                     <div className="cart-item-actions">
                         <img
