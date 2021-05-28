@@ -18,14 +18,25 @@ class CartItem extends React.Component {
         // if previous state not required use this
         // this.setState({
         //     quantity: this.state.quantity + 1
+        // }, () => {
+        //         console.log(this.state.quantity)
         // })
+        
 
-        // if previous state required use this
+        //if previous state required use this
         this.setState((prevState) => {
             return {
                 quantity: prevState.quantity + 1
             }
-        })
+        },
+            () => {
+                console.log(this.state.quantity)
+        });
+    
+        
+        
+        
+        
 
     
     }
