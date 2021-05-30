@@ -15,6 +15,7 @@ code {
 .cart-item {
   display: inline-flex;
   margin: 20px 10px;
+  
 }
 
 .cart-item .right-block {
@@ -23,6 +24,7 @@ code {
 
 .cart-item .left-block{
   padding : 0px 10px;
+
 }
 
 .cart-item-actions {
