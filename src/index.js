@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import firebase from 'firebase/firebase-firestore';
+import firebase from 'firebase';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCar-esosBENWYKCCYNVBxNkgXEr-G_6zI",
